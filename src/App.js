@@ -98,7 +98,7 @@ function App() {
 
       <div>
         {movieList.map((movie) => (
-          <div>
+          <div key={movie.id}>
             <h1 style={{color: movie.receivedAnOscar ? "green" : "red"}}>{movie.title}</h1>
             <p>Date: {movie.releaseDate}</p>
             <button onClick={() => deleteMovie(movie.id)}>Delete movie</button>
